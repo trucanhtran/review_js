@@ -6,29 +6,33 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
+    <form action="">
       <div>
-        <input type="text" hidden="Nhập điểm vào đây" id="grade" name="grade" />
+        <div>
+          <input type="text" id="grade" name="grade" />
+        </div>
+        <div>
+          <button onclick="getRank()">Xem xếp loại</button>
+        </div>
+        <div id="kq"></div>
       </div>
-      <div>
-        <button onclick="getRank()">Xem xếp loại</button>
-      </div>
-    </div>
-
+    </form>
     <script>
-      var diem = 5;
-      if (diem < 4) {
-        document.writeln("học lại");
-      } else if (diem >= 4 && diem < 5.5) {
-        document.writeln("loại D");
-      } else if (diem >= 5.5 && diem < 7) {
-        document.writeln("loại c");
-      } else if (diem >= 7 && diem < 8.5) {
-        document.writeln("loại B");
-      } else if (diem >= 8.5 && diem <= 10) {
-        document.writeln("Loại A");
-      } else {
-        document.writeln("Điểm không hợp lệ");
+      function getRank() {
+        var diem = document.getElementById("grade").value;
+        if (diem < 4) {
+          document.getElementById("kq").innerHTML = "học lại";
+        } else if (diem >= 4 && diem < 5.5) {
+          document.getElementById("kq").innerHTML = "loại D";
+        } else if (diem >= 5.5 && diem < 7) {
+          document.getElementById("kq").innerHTML = "loại C";
+        } else if (diem >= 7 && diem < 8.5) {
+          document.getElementById("kq").innerHTML = "loại B";
+        } else if (diem >= 8.5 && diem <= 10) {
+          document.getElementById("kq").innerHTML = "loại A";
+        } else {
+          document.getElementById("kq").innerHTML = "Điểm không hợp lệ";
+        }
       }
     </script>
   </body>
