@@ -6,13 +6,29 @@
     <title>Document</title>
   </head>
   <body>
+    <div>
+      <div>
+        <input type="text" hidden="Nhập điểm vào đây" id="grade" name="grade" />
+      </div>
+      <div>
+        <button onclick="getRank()">Xem xếp loại</button>
+      </div>
+    </div>
+
     <script>
-      var a = 6;
-      var b = 5;
-      if (a != b) {
-        document.writeln("a khác b");
+      var diem = 5;
+      if (diem < 4) {
+        document.writeln("học lại");
+      } else if (diem >= 4 && diem < 5.5) {
+        document.writeln("loại D");
+      } else if (diem >= 5.5 && diem < 7) {
+        document.writeln("loại c");
+      } else if (diem >= 7 && diem < 8.5) {
+        document.writeln("loại B");
+      } else if (diem >= 8.5 && diem <= 10) {
+        document.writeln("Loại A");
       } else {
-        document.writeln("a bằng b");
+        document.writeln("Điểm không hợp lệ");
       }
     </script>
   </body>
