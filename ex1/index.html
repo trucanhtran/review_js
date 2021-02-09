@@ -7,32 +7,16 @@
     <title>Document</title>
   </head>
   <body>
+    <div>Click các button để biết thêm chi tiết</div>
+    <button onclick="showInfo(this)">button 1</button>
+    <button onclick="showInfo(this)">button 2</button>
+    <button onclick="showInfo(this)">button 3</button>
+    <button onclick="showInfo(this)">button 4</button>
+    <button onclick="showInfo(this)">button 5</button>
     <script type="text/javascript">
-      function getText() {
-        console.log(123);
+      function showInfo(e) {
+        alert(e.innerText);
       }
     </script>
-
-
-    <div>
-      <input type="text" name="" id="demo" onkeypress="getText()" />
-    </div>
-    <div id="test" class="test" style="background: blueviolet;">hello</div>
-    <div id="domEvent" onclick="alert('hello world')">demo</div>
-    <div>di chuột vào list này</div>
-    <ul>
-      <li class="list">1</li>
-      <li class="list">2</li>
-      <li class="list">3</li>
-      <li class="list">4</li>
-      <li class="list">5</li>
-      <li class="list">6</li>
-    </ul>
-    <script>
-      // var content = document.getElementById("test").innerHTML;
-      // alert(content);
-      var colorTest=document.getElementById("test").style.background;
-      console.log(colorTest)
-    </script>
-  </bodynte>
+  </body>
 </html>
