@@ -6,14 +6,32 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
     <title>Document</title>
   </head>
-  <body>
+  <body onclick="getActive()">
     <div>click vào đây để xem kết quả</div>
     <div id="container">Click</div>
-    <script type="text/javascript">
-      var element = document.getElementById("container");
-      element.addEventListener("click", function () {
-        alert("bạn vừa click");
-      });
+    <input type="text" name="getText" id="getText" />
+    <button id="btnClick">click me!</button>
+    <div id="result"></div>
+    <button onclick="openW()">Open Facebook</button>
+    <button onclick="closeW()">Close</button>
+    <button onclick="moveW()">Move</button>
+    <script>
+      function getActive() {
+        var name = document.activeElement.tagName;
+        console.log(name);
+        document.getElementById("result").innerHTML = name;
+      }
+      function openW() {
+        fb = window.open("", "", "width=300,height=200");
+        return false;
+      }
+      function closeW() {
+        fb.close();
+      }
+      function moveW() {
+        fb.moveTo(200, 400);
+        fb.focus();
+      }
     </script>
   </body>
 </html>
