@@ -7,7 +7,13 @@
     <title>Document</title>
   </head>
   <body>
-    <h3>nhấn nút bên dưới</h3>
-    <button type="button" onclick="alert('Hello word!')">Click here!</button>
+    <div>click vào đây để xem kết quả</div>
+    <div id="container">Click</div>
+    <script type="text/javascript">
+      var element = document.getElementById("container");
+      element.addEventListener("click", function () {
+        alert("bạn vừa click");
+      });
+    </script>
   </body>
 </html>
